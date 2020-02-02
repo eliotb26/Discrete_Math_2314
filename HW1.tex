@@ -64,14 +64,7 @@ Due: Friday, Feb. 7, by 11:59pm,\\via Gradescope\\
 \vspace{.15in}
 \newline
 Explanation: Given that integers are all whole numbers, positive and negative, and 0. Rational numbers can be represented as fractions in between the integers, such as $1/2$, of the form of $a/b$ where $a,b \in \mathbb{Z}$. As rational numbers can also be whole numbers, positive and negative, then all integers are rational numbers. But as $1/2$ is a fraction in between two integers, it proves that not all rational numbers are integers. 
-\[
-\begin{aligned} %I want the math text below to align along the & symbol.  I placed my & symbol before the equal sign, but you can place it where ever you wish. 
-(x \vee y) \rightarrow z &= (-(x \vee y) ) \vee z \\
-&= ( (-x) \wedge (- y) ) \vee z.  \;\;  \mbox{Demorgan's Law} \\ % The double backslash ends the line.  The backslash semicolon gives me some space horizontally.  All text within the square bracket will be italicized.  I don't want Demorgan's Law to be italicized.  Therefore, I place it in \mbox{}  
-&= (z \vee (-x)) \wedge (z \vee (-y)) \;\; \mbox{Distributive Property} \\
-&= (x \rightarrow z) \wedge (y \rightarrow z) \\
-\end{aligned}
-\]
+\vspace{0.25in}
 
 \noindent 3.(6 points) 3.12  (k), (l)
 \vspace{.25in}
@@ -108,7 +101,8 @@ F&F&F&T&F&T&F&F \\
 \hline
 \end{tabular} %end of the table.  
 \] %need to close of the center of the table.  
-
+This shows that the two are not the same through the evidence of a truth table 
+\vspace{0.25in}
 
 
 
@@ -142,30 +136,98 @@ F&F&T&T&T&T \\
 \hline %\hline gives us a horizontal line.  
 $x$ & $y$ & $z$ & $x \vee y$ & $(x \vee y) \rightarrow z$ & $x\rightarrow z$ & $y \rightarrow z$ & $(x \rightarrow z) \wedge (y \rightarrow z)$ \\ 
 \hline
-T&T&F \\
+T&T&T&T&T&T&T&T \\
+\hline
+T&T&F&T&F&F&F&F \\
 \hline 
-T&F&T \\
+T&F&T&T&T&T&T&T \\
 \hline
-F&T&T \\
+F&T&T&T&T&T&T&T \\
 \hline
-T&F&F \\
+T&F&F&T&F&F&T&F \\
 \hline
-F&F&T \\
+F&F&T&F&T&T&T&T \\
 \hline 
-F&T&F \\
+F&T&F&T&F&T&F&F \\
 \hline
-F&F&F \\
+F&F&F&F&T&T&T&T \\
 \hline
 
 \end{tabular} %end of the table.  
 \] 
+\vspace{0.5in}
+
+
 
 \noindent 7.(9 points) 7.11 (a), (b), (h).  Use Theorem 7.2 when proving these problems.  Note that part (b) is done for you in problem 7.12.  Apply those methods when doings parts (a) and (h).  
+\newline
 \vspace{.15in}
+(a)  \[
+\begin{aligned} 
+(x \vee y) \vee (x \vee -y) \\
+&= x \vee (y \vee -y).  \;\;  \mbox{Distributive Property} \\ % The double backslash ends the line.  The backslash semicolon gives me some space horizontally.  All text within the square bracket will be italicized.  I don't want Demorgan's Law to be italicized.  Therefore, I place it in \mbox{}  
+&= x \vee T  \\
+&= \mbox{TRUE} \;\; \mbox{Identity} \\
+\end{aligned}
+\]
+
+
+\vspace{0.25in}
+(b)
+\[
+\begin{aligned} 
+(x \wedge (x \rightarrow y)) \rightarrow y \\
+&= [x \wedge (-x \vee y)] \rightarrow y \;\;  \mbox{Translate $\rightarrow$} \\
+&= [(x \wedge -x) \vee (x \wedge y)] \rightarrow y \;\; \mbox{Distributive Property}\\ 
+&= [\mbox{False} \vee (x \wedge y)] \rightarrow y \;\; \\
+&= (x \wedge y) \rightarrow y \;\; \mbox{Translate $\rightarrow$} \\
+&= ((-(x \wedge y )) \vee y \;\; \mbox{De Morgans}\\
+&= -x \vee (-y \vee y) \;\; \mbox{Distributive Property} \\
+&= -x \vee \mbox{True} \\
+&= \mbox{TRUE} \;\; \mbox{Identity} \\
+\end{aligned}
+\]
+ \vspace{0.25in}
+
+(h) 
+\[
+\begin{aligned} 
+((x \rightarrow y) \wedge (x \rightarrow -y)) \rightarrow -x \\
+&= (-x \vee y) \wedge (-x \vee -y)) \rightarrow -x \;\;  \mbox{Translate $\rightarrow$} \\
+&= -x \vee (y \wedge -y) \rightarrow -x  \;\; \mbox{Distributive Property}\\ 
+&= (-x \vee \mbox{False} ) \rightarrow -x \\
+&= -x \rightarrow -x \;\; \mbox{Identity Elements} \\
+&= x \vee -x \\
+&= \mbox{TRUE} \\
+\end{aligned}
+\]
 
 \noindent 8.(6 points) 7.13(a), (c).   Use any method you wish to prove this.  That is, use Theorem 7.2 or truth tables.   
-\vspace{.05in}
+\vspace{.05in} \\
+(a) 
+\[
+\begin{aligned} 
+(x \vee y) \wedve (x \vee -y) \wedge -x \\
+&= (x \vee (y \wedge -y)) \wedge -x \;\;  \mbox{Distributive Property} \\
+&= (x \vee \mbox{False} ) \wedge -x   \\ 
+&= x \wedge -x \;\; \mbox{Identity Elements} \\
+&= \mbox{FALSE} \\
+\end{aligned}
+\]
 
+\vspace{0.25in}
+(c) 
+\[
+\begin{aligned} 
+(x \rightarrow y) \wedge ((-x) \rightarrow y) \wedge -y\\
+&=  (-x \vee y) \wedge (( x\vee y)) \wedge -y\;\;  \mbox{Translate $\rightarrow$} \\
+&= (y \vee -x) \wedge (y\vee x) \wedge -y \;\; \mbox{De Morgans} \\ 
+&= y \vee (x \wedge -x) \wedge \y \;\; \mbox{Distributive} \\
+&= y \vee \mbox{False} \wedge -y \\
+&= y \wedge -y \;\; \mbox{Identity Elements} \\
+&= \mbox{FALSE} \\
+\end{aligned}
+\]
 
 
 
