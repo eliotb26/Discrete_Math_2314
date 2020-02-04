@@ -166,8 +166,9 @@ F&F&F&F&T&T&T&T \\
 \begin{aligned} 
 (x \vee y) \vee (x \vee -y) \\
 &= x \vee (y \vee -y).  \;\;  \mbox{Distributive Property} \\ % The double backslash ends the line.  The backslash semicolon gives me some space horizontally.  All text within the square bracket will be italicized.  I don't want Demorgan's Law to be italicized.  Therefore, I place it in \mbox{}  
-&= x \vee T  \\
+&= x \vee T \;\; \mbox{Identity}\\
 &= \mbox{TRUE} \;\; \mbox{Identity} \\
+\square \\
 \end{aligned}
 \]
 
@@ -179,12 +180,14 @@ F&F&F&F&T&T&T&T \\
 (x \wedge (x \rightarrow y)) \rightarrow y \\
 &= [x \wedge (-x \vee y)] \rightarrow y \;\;  \mbox{Translate $\rightarrow$} \\
 &= [(x \wedge -x) \vee (x \wedge y)] \rightarrow y \;\; \mbox{Distributive Property}\\ 
-&= [\mbox{False} \vee (x \wedge y)] \rightarrow y \;\; \\
-&= (x \wedge y) \rightarrow y \;\; \mbox{Translate $\rightarrow$} \\
-&= ((-(x \wedge y )) \vee y \;\; \mbox{De Morgans}\\
-&= -x \vee (-y \vee y) \;\; \mbox{Distributive Property} \\
-&= -x \vee \mbox{True} \\
+&= [\mbox{False} \vee (x \wedge y)] \rightarrow y \;\; \mbox{Identity}\\
+&= (x \wedge y) \rightarrow y \;\; \mbox{Identity} \\ 
+&= (-(x \wedge y)) \vee y \;\; \mbox{Translate $\rightarrow$} \\
+&= (-x \vee -y ) \vee y \;\; \mbox{De Morgans}\\
+&= -x \vee (-y \vee y) \;\; \mbox{Associative Property} \\
+&= -x \vee \mbox{True} \;\; \mbox{Identity}\\
 &= \mbox{TRUE} \;\; \mbox{Identity} \\
+\square \\
 \end{aligned}
 \]
  \vspace{0.25in}
@@ -195,10 +198,11 @@ F&F&F&F&T&T&T&T \\
 ((x \rightarrow y) \wedge (x \rightarrow -y)) \rightarrow -x \\
 &= (-x \vee y) \wedge (-x \vee -y)) \rightarrow -x \;\;  \mbox{Translate $\rightarrow$} \\
 &= -x \vee (y \wedge -y) \rightarrow -x  \;\; \mbox{Distributive Property}\\ 
-&= (-x \vee \mbox{False} ) \rightarrow -x \\
+&= (-x \vee \mbox{False} ) \rightarrow -x \;\; \mbox{Identity}\\
 &= -x \rightarrow -x \;\; \mbox{Identity Elements} \\
-&= x \vee -x \\
+&= x \vee -x \;\; \mbox{Translate} \rightarrow\\
 &= \mbox{TRUE} \\
+\square \\
 \end{aligned}
 \]
 
@@ -207,11 +211,12 @@ F&F&F&F&T&T&T&T \\
 (a) 
 \[
 \begin{aligned} 
-(x \vee y) \wedve (x \vee -y) \wedge -x \\
+(x \vee y) \wedge (x \vee -y) \wedge -x \\
 &= (x \vee (y \wedge -y)) \wedge -x \;\;  \mbox{Distributive Property} \\
-&= (x \vee \mbox{False} ) \wedge -x   \\ 
+&= (x \vee \mbox{False} ) \wedge -x  \;\; \mbox{Identity} \\ 
 &= x \wedge -x \;\; \mbox{Identity Elements} \\
-&= \mbox{FALSE} \\
+&= \mbox{FALSE} \;\; \mbox{Identity}\\
+\square \\
 \end{aligned}
 \]
 
@@ -220,12 +225,13 @@ F&F&F&F&T&T&T&T \\
 \[
 \begin{aligned} 
 (x \rightarrow y) \wedge ((-x) \rightarrow y) \wedge -y\\
-&=  (-x \vee y) \wedge (( x\vee y)) \wedge -y\;\;  \mbox{Translate $\rightarrow$} \\
-&= (y \vee -x) \wedge (y\vee x) \wedge -y \;\; \mbox{De Morgans} \\ 
-&= y \vee (x \wedge -x) \wedge \y \;\; \mbox{Distributive} \\
-&= y \vee \mbox{False} \wedge -y \\
+&=  (-x \vee y) \wedge ( x\vee y) \wedge -y\;\;  \mbox{Translate $\rightarrow$} \\
+&= (y \vee -x) \wedge (y\vee x) \wedge -y \;\; \mbox{Commutative Property} \\ 
+&= y \vee (x \wedge -x) \wedge -y \;\; \mbox{Distributive} \\
+&= y \vee \mbox{False} \wedge -y \;\; \mbox{Identity} \\
 &= y \wedge -y \;\; \mbox{Identity Elements} \\
 &= \mbox{FALSE} \\
+\square \\
 \end{aligned}
 \]
 
