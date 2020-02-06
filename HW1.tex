@@ -71,7 +71,7 @@ Explanation: Given that integers are all whole numbers, positive and negative, a
 
 (k) divisors = 96
 
-(L) divisors = 0 
+(L) divisors = Infinitely many, {0,1,2,...n}
 
 \vspace{.25in}
 
@@ -165,7 +165,8 @@ F&F&F&F&T&T&T&T \\
 (a)  \[
 \begin{aligned} 
 (x \vee y) \vee (x \vee -y) \\
-&= x \vee (y \vee -y).  \;\;  \mbox{Distributive Property} \\ % The double backslash ends the line.  The backslash semicolon gives me some space horizontally.  All text within the square bracket will be italicized.  I don't want Demorgan's Law to be italicized.  Therefore, I place it in \mbox{}  
+&= x \vee y \vee x \vee -y  \;\;  \mbox{Associative Property} \\ % The double backslash ends the line.  The backslash semicolon gives me some space horizontally.  All text within the square bracket will be italicized.  I don't want Demorgan's Law to be italicized.  Therefore, I place it in \mbox{}  
+&= x \vee x \vee y \vee -y  \;\; \mbox{Commutative}\\
 &= x \vee T \;\; \mbox{Identity}\\
 &= \mbox{TRUE} \;\; \mbox{Identity} \\
 \square \\
