@@ -6,7 +6,7 @@
 \usepackage{multirow, multicol}
 \usepackage{tikz}
 \pagestyle{fancy}
-\fancyhead[RO]{Spring 2020}
+\fancyhead[RO]{Eliot Brown 2020}
 \fancyhead[LO]{MA-UY 2314: Discrete Mathematics}
 \usepackage{comment}
 \newif\ifshow
@@ -36,13 +36,22 @@ Due: Friday, Feb. 14, by 11:59pm,\\via Gradescope\\
 \noindent 1.  Let $x$ be an integer.  We say that $x$ is a perfect square iff $x = a^{2}$ for some $a \in \mathbb{Z}$.  We say that integers $x$ and $y$ are consecutive perfect squares iff $x= a^{2}$ and $y = (a + 1)^{2}$ for some $a \in \mathbb{Z}$.
 \vspace{.05in}
 \begin{enumerate}
-    \item [(a)] Disprove: \textit{If x and y are consecutive perfect squares, then $x - y$ is even}.
+    \item [(a)] Disprove: \textit{If x and y are consecutive perfect squares, then $x - y$ is even}. \\  \\
+    \textbf{Solution} $a = 2$ and $x = 4$ and $y = 9$ therefore, $x - y = 4 - 9 = -5$ odd  
 \item[(b)] Prove: \textit{If x and y are consecutive perfect squares, then $x - y$ is odd}.
 
 \noindent \textbf{Remark:} Your homework should start off as follows:
 \vspace{.05in}
 
-\noindent \textbf{Pf:}  Assume $x$ and $y$ are consecutive perfect squares.  
+\noindent \textbf {Pf:}  Assume $x$ and $y$ are consecutive perfect squares.\\
+\indent $x = a^2$ and $y =(a+1)^2$ \\
+\indent $x - y = a^2 - (a +1)^2$ \\
+\indent $x - y = a^2 - (a^2 +2a +1)$ \\ 
+\indent $ x - y = a^2 - a^2 - 2a -1$ \\ 
+\indent $ x - y = -2a - 1$ \\
+\indent $ x - y = - (2a+1)$ - The definition of odd\\
+$\square$
+
 \end{enumerate}
 \vspace{.05in}
 
@@ -54,7 +63,17 @@ Due: Friday, Feb. 14, by 11:59pm,\\via Gradescope\\
 \noindent \textbf{Remark:} Your homework should start off as follows:
 \vspace{.05in}
 
-\noindent \textbf{Pf:}  Assume $a|d$ and $a |e$.
+\noindent \textbf{Pf:}  Assume $a|d$ and $a |e$.\\
+\indent Assume $a | d$ \\ 
+\indent $d = k_1a$
+\indent \hspace{1cm} assume $k_1, k_2 \epsilon \mathbb{Z}$ \\
+\indent$e = k_2a$ \\ 
+\indent$db + ec = k_1ab + k_2ac$ \\ 
+\indent$db + ec = a (k_1b + k_2c)$ \hspace{1cm} where m = $k_1b + k_2c$ \\ 
+\indent$db + ec = am$ \\
+\indent$a|db + ec$ \\
+$\square$
+
 \vspace{.15in}
 
 \noindent 3.  Prove \textit{ If $a$ is an integer, then $a^{2} - a$ is even}.
@@ -63,13 +82,47 @@ Due: Friday, Feb. 14, by 11:59pm,\\via Gradescope\\
 \noindent \textbf{Remark:} Your homework should start off as follows:
 \vspace{.05in}
 
-\noindent \textbf{Pf:}  Assume $a$ is an integer.  
+\noindent \textbf{Pf:}  Assume $a$ is an integer. \\
+\indent (1) If a is odd  \\
+\indent $a = 2k + 1$\\
+\indent $a^2 - a = (2k+1)^2 - 2k+1$\\
+\indent $a^2 - a = (4k^2 + 4k + 1) - 2k + 1$\\
+\indent $a^2 - a = 4k^2 + 2k$\\
+\indent $a^2 - a = 2(2k^2 + k)$\\
+\indent $2|a^2 - a$\\
+
+\indent (2) If a is even \\ 
+\indent a = 2k \\
+\indent $a^2 = 4k^2$ \\ 
+\indent a = 2k \\
+\indent $a^2 - a = 4k^2 -2k$ \hspace{1cm} $m = 2k^2 -k$\\
+\indent $a^2 - a = 2m$ \\
+$\square$
 \vspace{.15in}
 
 
-\noindent 4.  Suppose a student has proven that $x \rightarrow y $= T and $-y \rightarrow -x$ = T.  Has student proven that $x \leftrightarrow y$ = T. Explain.  
-\vspace{.15in}
+\noindent 4.  Suppose a student has proven that $x \rightarrow y $= T and $-y \rightarrow -x$ = T.  Has student proven that $x \leftrightarrow y$ = T. Explain.  \\ 
+In order to prove $x \leftrightarrow y$ \\
+\indent NTP: \\
+\indent \indent 1) $x \rightarrow y$ \\
+\indent \indent 2) $y \rightarrow x$\\
 
+\indent student proved $x \rightarrow y$ = T \\ 
+\indent student proved $-y \rightarrow -x$ = T \\ 
+
+\indent NTP: 2) $y \rightarrow x$ = T \\ 
+
+\indent Assume $ -y \rightarrown -x $ = T \\
+\indent $y \vee -x$ \;\; \mbox Translate \\
+\indent $-x \vee y$ \;\; \mbox Commutative \\
+\indent $x \rightarrow y$ \mbox Translate \\
+\indent Student proved $x \rightarrow y$ twice so therefore did not prove $x \leftrightarrow y$ \\
+$\square$
+
+
+ 
+
+\vspace{.15in}
 \noindent 5.  Let $x$ and $y$ be integers.  We say that $x$ and $y$ have the same parity iff $x$ and $y$ are both even OR $x$ and $y$ are both odd.  
 \vspace{.05in}
 
@@ -79,11 +132,29 @@ Due: Friday, Feb. 14, by 11:59pm,\\via Gradescope\\
 \noindent \textbf{Remark:} Your homework should start off as follows:
 \vspace{.05in}
 
-\noindent \textbf{Pf:}  Assume that $x$ and $y$ are integers with the same parity.  
+\noindent \textbf{Pf:}  Assume that $x$ and $y$ are integers with the same parity.  \\
+
+\underline {Proving integers of an Even Parity} \\ 
+
+\indent $x = 2k_1$ \\ 
+\indent $y = 2k_2$ \\ 
+\indent $x + y = 2k_1 + 2k_2$ \\
+\indent $x + y = 2(k_1 +k_2$) \\
+\indent $2 | x + y$ \\
+
+\underline {Proving integers of an odd Parity} \\ 
+\indent $x = 2k_1 + 1$ \\ 
+\indent $y = 2k_2 + 1$ \\ 
+\indent $x + y = (2k_1 + 1) + (2k_2 + 1)$ \\
+\indent $x + y = 2k_1 + 2k_2 + 2$ \\
+\indent $x + y = 2(k_1 + k_2 +1)$ \\ 
+\indent $2|x+y$ \\
+$\square$
 \vspace{.15in}
 
 
-\noindent 6.  Prove \textit{ If $x, y, z, w$ be four consecutive integers, then $xyzw$ is one less than a perfect square}. 
+\noindent 6.  Prove \textit{ If $x, y, z, w$ be four consecutive integers, then $xyzw$ is one less than a perfect square}. \\
+
 \vspace{.05in}
 
 \noindent \textbf{Remark:} Note that one less than a perfect sqaure means that $xyzy = a^{2} - 1$ for some integer $a$.  Your homework should start off as follows:
@@ -93,15 +164,32 @@ Due: Friday, Feb. 14, by 11:59pm,\\via Gradescope\\
 \vspace{.15in}
 
 
+\indent $x = k , y = k+1, z = k+2, w = k+3$ \\
+\indent $xy = k^2 + k$ \\ 
+\indent $xyz = (k^2 + k )(k+2)$ \\ 
+\indent $xyz = k^3 + 3k^2 + 2k$ \\ 
+\indent $xyzw = k^3 + 3k^2 + 2k (k+3) $ \\ 
+\indent $xyzw = k^4 + 6k^3 + 11k^2 + 6k$ \\ 
+\indent $xyzw = (k^4 + 6k^3 + 11k^2 + 6k +1) -1 $ \\ 
+\indent $xyzw = (k^2 + 3k + 1)^2 -1 = a^2 - 1$ \\
+$\square$
+
+
 \noindent 7.  Let $a, b, c$ be integers.  Disprove:  \textit{ If $a | c$ and $b | c$ then $(a + b) | c$}.
 \vspace{.05in}
 
 \noindent \textbf{Remark:} You do not need to justify your counterexample. 
 \vspace{.15in}
 
+\textbf{Solution} $ a = 2 \wedge b = 3 \wedge c = 6$ as $2|6 \wedge 3|6$ but not $5|6$ which disproves the claim. \\
+
 
 \noindent 8.  Consider the statement \textit{For all integers $n$, $n^{2} - n + 1$ is a prime number.  }  If this statement is False, provide a counterexample.  If this statement is True, prove it.  
 \vspace{.15in}
+
+\textbf{Solution} False: $n=5$ then $n^2-n+1= 21$ which is divisible by 3. \\
+
+
 
 \noindent 9.  Prove: \textit{If $x$ is an odd integers, then the square of $x$ is of the form $8m + 1$ for some $m \in \mathbb{Z}$.}
 \vspace{.05in}
@@ -115,7 +203,19 @@ x^{2} = 8m + 1, \;\; \mbox{ for some } m \in \mathbb{Z}
 \noindent \textbf{Remark:} Your homework should start off as follows:
 \vspace{.05in}
 
-\noindent \textbf{Pf:}  Assume that $x$ is an odd integer.   
+\noindent \textbf{Pf:}  Assume that $x$ is an odd integer.  \\ 
+\indent $x = 2k+1$ and $k = 2a+1$ \\ 
+\indent $x^2 = (2k+1)^2$ \\
+\indent $x^2 = 4k^2 + 4k + 1 = 8m + 1$ \\ 
+\indent $x^2 = 4k^2 + 4k = 8m$ \\ 
+\indent $x^2 = 4(k^2 + k) = 8m$ \\
+\indent $x^2 = k^2 + k = 2m$ \\
+\indent $x^2 = ((2a+1)^2 +(2a+1))= 2m$\\
+\indent $x^2 = 4a^2 + 6a + 1 + 2a + 1= 2m$\\
+\indent $x^2 = 4a^2 +8a + 2= 2m$ \\
+\indent $x^2 = 2(a^2 + 4a +1)= 2m$\\
+\indent $ m = a^2 + 4a + 1$\\
+$\square$
 \vspace{.15in}
 
 
@@ -127,3 +227,4 @@ x^{2} = 8m + 1, \;\; \mbox{ for some } m \in \mathbb{Z}
 
 
 \end{document}
+
