@@ -38,9 +38,9 @@ Due: Friday, Feb.. 21, by 11:59pm,\\via Gradescope\\
 
 \begin{enumerate}
     \item (6 points) Section 8:  8.7(a), 8.9.  Explain your answers. \\ 
-    \textbf{Solution 8.7a} $31!$ as order matters with 30 photos in 2 places. As it is not ordered,  \\
+    \textbf{Solution 8.7a} $31!$ as order matters with 30 photos in 2 places. As it is not ordered, k photos can be put into the family album and 30-k photos will then be put into the friends album. There are then $(30-k)!$ ways to organize the photos in the friends album and $30*29*... 30-k+1$ amount of ways to organize the family album. For instance with 3 photos in the Family album there will be $30*29*28$ ways, and then with 27 photos in the friends album there will be 27! ways. Through the multiplication rule to include all possibilities of k out of the photos, this then results in $31*30! = 31!$ ways. \\
     
-    \textbf{Solution 8.9} $7!*64$ or 3136 or $7*7*8*8$, as 7 other places in a row, for each row, then 64 places on the board, then using the multiplication rule. \\
+    \textbf{Solution 8.9} $7!*64$ or 3136 or $7*7*8*8$, as 7 other places in a row, for each row, then 64 places on the board, then using the multiplication rule to combine these amount of ways. \\
     
     
     \item (6 points) Section 8:   8.16, 8.19.  Explain your answers. \\ 
@@ -60,12 +60,41 @@ Due: Friday, Feb.. 21, by 11:59pm,\\via Gradescope\\
     
     \item (3 points) Let $A = 2^{\emptyset}, \; B = 2^{A}, C = 2^{B}$, and $D = 2^{C}$.  Construct D.   
     
+        
+
+    \textbf{D:}\\
+    \noindent{} \{\\
+    \emptyset,
+    {\{\emptyset\}},   \{\emptyset,\{\emptyset\}\},    \{\{\emptyset\}\},    \{\{\{\emptyset\}\}\} \\
+    \{\emptyset,\{\emptyset,\{\emptyset\}\}\},  \{\emptyset,\{\emptyset\}\},  \{\emptyset,\{\{\emptyset\}\}\},  \{\{\emptyset,\{\emptyset\}\},\{\emptyset\}\},\\
+    \{\{\emptyset,\{\emptyset\}\},\{\{\emptyset\}\}\}, \{\{\emptyset\},\{\{\emptyset\}\}\},\\
+    \{\emptyset,\{\emptyset,\{\emptyset\}\},\{\emptyset\}\}, \{\emptyset,\{\emptyset,\{\emptyset\}\},\{\{\emptyset\}\}\}\\
+    \{\emptyset,\{\emptyset\},\{\{\emptyset\}\}\}, \{\{\emptyset,\{\emptyset\}\}\},\{\emptyset\},\{\{\emptyset\}\}\},
+  
+    \}
+
     
     
     
     
-    \item (18 points) Section 10:  10.1(g), 10.3(c)(d)(e)(f)(g).  
+    \item (18 points) Section 10:  10.1(g), 10.3(c)(d)(e)(f)(g).  \\
+    \noindent(10.1 (g)) \\
+    \{\emptyset,\{1\},\{2\},\{3\},\{4\},\{5\} \}\\
     
+    \noindent(10.3) \\(c)  \\
+    0. There are no numbers contained in the empty set so the carnality of it will have to be zero.
+    
+    \noindent(d)\\
+    $0$
+    
+    \noindent(e)\\
+    \infty
+     
+    \noindent(f)\\
+    $2^8$
+     
+    \noindent(g)\\
+    $4$
     
     
     
@@ -84,7 +113,61 @@ Due: Friday, Feb.. 21, by 11:59pm,\\via Gradescope\\
     
     
     \item (24 points) Section 10: 10.5, 10.6
+    
+    \textbf{Solution 10.5} \\
+    \noindent A: $A = \emptyset$ \;\; $B = \{1\}$ \;\; $C=\{1,2,3\}$ \\
+    \noindent B: $A = \{1\}$ \;\; $B = \{\{1\}\}$ \;\; $C=\{\{1\},2\}$ \\
+    \noindent C: $A = \{1\}$ \;\; $B = \{\{1\}\}$ \;\; $C=\{\{\{1\}\}\}$ \\
+    \noindent D: $A = \{1\}$ \;\; $B = \{1, 2\}$ \;\; $C=\{\{1,2\},3\}$ \\
+    
+    
+    \textbf{Solution 10.6} \\
+    \noindent A: $A = \{1 \}$ as $\emptyset$ exists in all sets \\ 
+    \noindent B: $A = \{1\}$ \\
+    \noindent C: $A=\emptyset$ \\
+    \noindent D: No solution as set A can never exists in $\emptyset$ \\
+    
+
+    
     \item (9 points) 10.12, 10.14, 10.15.  
+    
+    \textbf{Solution 10.12} Let $C=\{x \epsilon \mathbb{Z} : x| 12 \} \wedge  D= \{x \epsilon \mathbb{Z}: x|36 \}$ Prove C $\subseteq$ D \\
+    NTS: \\
+       $\bullet$ If $x \epsilon C \rightarrow x \epsilon D$ \\
+       \[
+\begin{aligned} 
+ x \epsilon C \\
+&=  x|12\;\; \\ 
+&=  12 = kx \;\;\;\;\; k \epsilon \mathbb{Z}\\
+&= 36 = 3kx\;\; \\
+&= 36 = mx \;\;\;\;\; m \epsilon 3k\\
+&= x|36 \\
+\square \\
+\end{aligned}
+\]
+ 
+    
+    
+    \textbf{Solution 10.14}
+    Give a value of x where the following is true:
+           \[
+\begin{aligned} 
+ x \subseteq \{x\}\\
+&=  x = \emptyset \;\; \\ 
+&= \emptyset \subseteq \{\emptyset\} \;\;\;\;\;  \\
+\square \\
+\end{aligned}
+\]
+    
+    \textbf{Solution 10.15}
+    Show that T $\neq$ P:\\
+    Let $x= \left( 0,1,-1\right)$ where $x \epsilon P$\\ 
+    Then x $\epsilon$ P(a,b,c) cannot belong to T(p,q,r) \\
+    $ p = 0, q = 1, r = -1$
+    r must be non negative as in T: $r = x^2 + y^2$ \\ 
+    Also as in T, $q=2xy$ for which $1=2x*y$ has no solutions for integers x,y. 
+   
+    
     \item (6 points)  Let 
     \[    
     \begin{aligned}
@@ -93,8 +176,36 @@ Due: Friday, Feb.. 21, by 11:59pm,\\via Gradescope\\
     \end{aligned}
     \]
     \begin{enumerate}
-        \item Is $A \subseteq B$?  If so, prove it.  If not, provide an appropriate counter-example.  Show that your counter-example works, i.e. show that your counterexample belongs to $A$ however does not belong to $B$.  
-        \item  Is $B \subseteq A$?  If so, prove it.  If not, provide an appropriate counter-example.  Show that your counter-example works, i.e. show that your counterexample belongs to $B$ however does not belong to $A$.  
+        \item Is $A \subseteq B$?  If so, prove it.  If not, provide an appropriate counter-example.  Show that your counter-example works, i.e. show that your counterexample belongs to $A$ however does not belong to $B$.  \\
+        
+        \textbf{Solution} Prove if $A\subseteq B$ \\
+        NTS: $x \epsilon A \rightarrow x \epsilon B$
+            \[
+\begin{aligned} 
+Assume: x \epsilon A \wedge x \epsilon \mathbb{Z} \\
+ x = 6k -5 \;\;\;\;\;\;\;\;\; k \epsilon \mathbb{Z} \\
+&=  6k(+6-6) -5\;\; \\ 
+&= (6k-6) +1 \;\;\;  \\
+&= 3(2k-2) +1 \;\;\; m = 2k-2 \\
+&= 3m+1 \\
+\square \\
+\end{aligned}
+\]
+        
+        \\
+        \\
+        
+        \item  Is $B \subseteq A$?  If so, prove it.  If not, provide an appropriate counter-example.  Show that your counter-example works, i.e. show that your counterexample belongs to $B$ however does not belong to $A$.  \\
+        
+        \textbf{Solution} Is $B \subseteq A$ \\
+        x = 4 \\
+        B: $4 = 3m +1$ \;\;\; $ m = 2k-2$ \\
+        $4 = 3(2k - 2) +1$ \\ 
+        $4 = 6k -6 +1$ \\
+        $9 = 6k$  \\
+        $6|9$ does not work, therefore B is not a subset of A \\
+        \square
+        
     \end{enumerate}
     \end{enumerate}
 \end{document}
