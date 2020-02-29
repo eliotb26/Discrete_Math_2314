@@ -105,13 +105,22 @@ The two statements are equivalent because the values came from the same set. The
 \noindent{A: } This is true because the the only positive root of 4 is 2.\\
 \noindent{B: } This is false because the square root of 4 is both positive and negative 2\\
 \noindent{C: } This is false the square root of of 3 is 1.7 which is not a natural number\\
-\noindent{D: } This is false because y has to equal 1 for which xy can equal x
+\noindent{D: } This is true because x=0  \\
 \noindent{E: } This is true because the only way xy =y is if x is one. 
 
 \end{proof}
 
 \noindent 3.(21 points)  Section 12 problems 12.1
 \vspace{.15in}
+
+\textbf{Solution 12.1}//
+\item A. \{1,2,3,4,5,6,7,\}
+\item B. \{4,5\}
+\item C. \{1,2,3\}
+\item D. \{5,6,7\}
+\item E. \{1,2,3,6,7\}
+\item F. \{(1,4), (1,5), (1,6), (1,7), (2,4), (2,5), (2,6), (2,7), (3,4), (3,5), (3,6), (3,7), (4,4), (4,5), (4,6), (4,7), (5,4), (5,5), (5,6), (5,7) \}
+\item G. \{(4,1),(4,2), (4,3), (4,4), (4,5), (5,1), (5,2), (5,3), (5,4), (5,5), (6,1), (6,2), (6,3), (6,4), (6,5), (7,1), (7,2), (7,3), (7,4), (7,5) \} \\ 
 
 
 
@@ -130,6 +139,13 @@ Your proof should be begin as follows
 \noindent \textbf{Proof:}  Assume that $x \in (A \cup B) - (A \cap B)$.  
 \vspace{.15in}
 
+\Rightarrow  $(x \epsilon A \vee x \epsilon) \wedge (x \notin A \cup x \notin B)$ \\ 
+\Rightarrow $ ((x \epsilon A \vee x \epsilon B) \wedge (x \notin A)) \cup (x\epsilon A \vee x \epsilon B) \wedge x \notin B)$ \\ 
+\Rightarrow $(( x \epsilon A \wedge x \notin A) \vee ( x\epsilon B \wedge x \notin A)) \vee ((x \epsilon B \wedge x \notin  B) \vee (x \epsilon A \wedge x \notin B))$ \\ 
+\Rightarrow $ (F \vee ( x \epsilon B \wedge x \notin A)) \vee (( F \vee (x \epsilon A \wedge x \notin B))$ \\ 
+\Rightarrow $x\epsilon (B-A) \vee x \epsilon (A-B)$ // 
+\Rightarrow $x \epsilon A \triangle B$ \;\; \square \\
+
 
 
 \noindent 5.(6 points)  Section 12 problems 12.14, 12.15.  Prove these statements using the $``$element method".  For instance, let's take a look at 12.14.  To prove $A - \emptyset = A$, we NTS
@@ -142,10 +158,57 @@ In turn, you should have
 
 \noindent \textbf{Proof of (a):}  Assume that $x \in A - \emptyset$.  
 \vspace{.15in}
+\item NTS: A) $x \epsilon A - \emptyset \rightarrow x \epsilon A$ \\ 
+\indent B) $x \epsilon A \rightarrow x \epsilon A - \emptyset$
+\item Pf: A) Assume $x \epsilon A - \emptyset$ \\
+\Rightarrow $x\epsilon A \wedge x \notin \emptyset$ \\
+\Rightarrow $x \epsilon A \wedge T$ \\ 
+\Rightarrow $x \epsilon A$ \;\; $\square$
+\\ 
+\item PF: B) Assume $x \epsilon A$ \\ 
+\Rightarrow $x \epsilon A = x \epsilon A \vee F$ \\ \Rightarrow $x \epsilon A \vee x \epsilon \emptyset $ \\ 
+\Rightarrow $x \epsilon A - \emptyset$ \;\; $\square$ \\
 
 \noindent \textbf{Proof of (b):}  Assume that $x \in A$.  
-\vspace{.15in}
+\vspace{.15in} 
 
+\item NTS: A) $x \epsilon \emptyset - A \rightarrow x \epsilon \emptyset$ \\ 
+\indent B) $ x\epsilon \emptyset \rightarrow x \epsilon \emptyset \- A$  \\ 
+\item PF (A): Assume $x \epsilon \emptyset - A$ \\ 
+\rightarrow $x \epsilon \emptyset \wedge x \notin A$ \\
+\rightarrow False $ \wedge x \notin A$ \\ 
+\rightarrow False \;\; \square \\ 
+
+\item PF (B): Assume $x \epsilon \emptyset$ \\ 
+\rightarrow False \;\; \square \\
+
+
+\textbf{Solution 12.15}
+\item NTS(1): A) $x \epsilon A \triangle A \rightarrow x \epsilon \emptyset$  \\ 
+\indent $x \epsilon \emptyset \rightarrow A \triangle A$ \\ 
+\item PF (A): Assume $x \epsilon A \triangle A$ \\ 
+\rightarrow $x \epsilon (A-A) \cup x \epsilon (A-A)$ \\ 
+\rightarrow $x \epsilon \emptyset \cup x \epsilon (A-A)$ \\ 
+\rightarrow False \;\; \square \\ 
+
+\item PF (B): Assume $x \epsilon \emptyset$ \\ 
+\rightarrow $x \epsilon F$ \;\; $\square$ \\ 
+
+\item NTS(2): A) $x \epsilon A \triangle \emptyset \rightarrow A$ \\ 
+\indent B) $x \epsilon A \rightarrow x \epsilon A \triangle \emptyset$ \\ 
+
+\item PF (A) Assume $x \epsilon A \triangle \emptyset$ \\ 
+\rightarrow $x \epsilon (A - \emptyset ) \cup ( \emptyset - A)$ \\ 
+\rightarrow $(x \epsilon A \wedge x \notin \emptyset) \vee (x \epsilon \emptyset \wedge x \notin A) $ \\ 
+\rightarrow $(x \epsilon A \wedge T) \vee (F \wedge x \notin A)$ \\ 
+\rightarrow $(X\epsilon A) \vee F$ \\ 
+\rightarrow $x \epsilon A$ \;\; $\square$ \\ 
+
+\item PF B): Assume $x \epsilon A$ \\ 
+\rightarrow $(x \epsilon A) \vee F$ \\ 
+\rightarrow $(x \epsilon A \wedge T) \vee (F \wedge x \notin A)$ \\
+\rightarrow $(x \epsilon A \wedge x \notin \emptyset) \vee (x \epsilon \emptyset \wedge x \notin A)$ \\ 
+\rightarrow $x\epsilon A \triangle \emptyset$ \;\; \square \\ 
 
 
 
@@ -158,7 +221,60 @@ In turn, you should have
     \item If the Venn Diagram suggest that the statement is false, then you will need to provide a counterexample.  Note that the Venn diagram is not a counterexample.  \textbf{You must justify your counterexample}.  That is, you need to convince me that the LHS $\neq$ RHS for your particular counterexample. 
     \item If the Venn diagram suggest that the statement is true, then you need to prove the statement using the $``$element method".  A Venn diagram is not a proof.  
 \end{enumerate}
+\noindent A - (B - C) = (A - B) - C is False. CE: Let A = 1,2 B = 2,3 and C = 2,4, then A-(B-C) = 1,2 but (A - B) - C = 1; \\ 
+\\
+b) (A B) - C = (A - C) - B is True \\
+\\
+PF 1) Assume $x \in (A-B) - C$ \\
+$(x \in A) \wedge (x \notin B) \wedge (x \notin C)$\\
+$(x \in A) \wedge (x \notin C) \wedge (x \notin B)$\\
+$x \in (A - C) - B$ \\
+\\
+PF 2) Assume $x \in (A - C) -B$\\
+($x \in A) \wedge (x \notin C) \wedge (x \notin B)$ \\
+$(x \in A) \wedge (x \notin B)\wedge (x \notin C)$ \\
+$x \in (A - B) - C$\\
+\\
+c) $(A \cup B) - C = (A - C) \cap (B - C)$ is false \\ 
+Let A = {1,2}, B = {2,3} C = {2,4}\\
+$(A \cup B) - C =  \{1,2,3\} - \{2,4\}  = \{1,3\}$\\
+(A - C)$ \cap (B - C) = $ \{1\} \cap {3}$ = \emptyset$\\
+{1,3} $ \neq \emptyset$ \\ 
+\\
+d) if $A = B - C$, then $B = A \cup C$ is false \\
+Let A = \{2,3,4\}, B = \{2,3,4\}, C = \{1\} \\
+$A = B - C = \{2,3,4\}$ \\
+$A \cup C = \{1,2,3,4\}$ \\
+$\{1,2,3,4\} \neq \{2,3,4\}$ \\
 
+\\
+
+e) if B= A \cup C, then A= B-C is false\\
+let A= \{1,2,3\} , C= \{3,4,5\} \\
+A \cup C = B = \{1,2,3,4,5\} \\
+B - C = \{1,2\} \\
+$B-C \neq A \;\; \square$ \\
+
+f) $|A-B| = |A|-|B|$ is false. \\
+let A=1 and B=-5 \\
+$|A-B| = 6 $\\
+$|A|-|B|=1-5=-4$ \\
+$|A-B| \neq |A|-|B| \;\; \square$\\
+
+g) (A-B) \cup B = A is False.\\
+let A= \{1,2,3\} and let B= \{4,5\} \\
+A - B = \{1,2,3\} \\
+(A-B) \cup B = \{1,2,3,4,5\} \\
+$(A-B) \cup B \neq A \;\; \square$
+
+
+
+h) (A \cup B)-B = A is False.\\
+Let A= \{1,2,3,4,5\} and let B= \{4,5\} \\
+A \cup B = \{1,2,3,4,5\} \\
+(A \cup B) - B = \{1,2,3\} \\
+$(A \cup B)-B \neq A \;\; \square$\\
+\vspace{0.15in}
 
 
 \noindent 7.(6 points) 
@@ -246,17 +362,57 @@ In proving 7(b), you have proven half of the statement
 \indent a) (1,2), (1,3), (1,4), (1,5), (2,3), (2,4), (2,5), (3,4), (3,5), (4,5) \\
 \indent b) (1,1), (1,2), (1,3), (1,4), (1,5), (2,2) (2,4), (3,3), (4,4), (5,5) \\
 \indent c) (1,1), (2,2), (3,3), (4,4), (5,5) \\
-\indent d) (1,1), (2,2), (3,3), (4,4), (5,5), (1,2), (1,3), (1,4), (1,5), (2,1), (3,1), (4,1), \indent (5,1), (2,3), (2,4), (2,5), (4,2), (3,2), (4,2), (5,2), (3,4), (3,5), (4,3), (5,3), (4,5), (5,4)\\
+\indent d) (1,1), (2,2), (3,3), (4,4), (5,5), (1,2), (1,3), (1,4), (1,5), (2,1), (3,1), (4,1),(5,1), (2,3), (2,4), (2,5), (4,2), (3,2), (4,2), (5,2), (3,4), (3,5), (4,3), (5,3), (4,5), (5,4)\\
 
 14.2 \\
 \indetn a) The consecutive relation \\
-\indent b) The greater than or equal to relation \\
-\indent c) The equal-to-6 relation 
-\indent d) The is-divisible-by relation
+\indent b) The greater-than-or-equal-to relation \\
+\indent c) The equal-to-6 relation \\
+\indent d) The is-divisible relation\\
 
 \vspace{.15in}
 
-\noindent 10.(33 points) Section 14 problems 14.3 and 14.4.  
+\noindent 10.(33 points) Section 14 problems 14.3 and 14.4. \\
+
+14.3 \\ 
+\indent a) Reflexive: TRUE. contains (a, a) for every ∈ a there exists an R\\
+\indent Ir-reflexive: False. x = 1, 1R1 = False\\
+\indent Symmetric: TRUE. (a, b) there exists an  R and a = b.So(b, a) ∈ R \\
+\indent Anti-Symmetric: True. R only contains like (a, a) \\
+\indent Transitive: TRUE. \\
+\\
+\indent b) Reflexive: False: 1R1 = F \\
+\indent Ir-reflexive: True\\
+\indent Symmetric: False (1,2) 1R2 implies 2R1 = F \\ 
+\indent Anti-Symmetric: True \\
+\indent Transitive: False; (1,2) there is no (2,1) \\
+\\
+\indent c)Reflexive: False (2,2)  is not in R \\ 
+\indent Ir-reflexive: False (1,1) exists in R \\
+\indent Symmetric: False (1,2) exists in R, (2,3) there exists in R, (1,3) does not exist in R \\ 
+\indent Anti-Symmetric: TRUE  \\ 
+\indent Transitive: TRUE \\ 
+\\ 
+\indent d) Reflexive: False (2,2) doesn't exist in R\\
+\indent Ir-reflexive:  False, x = 1, 1r1 = False \\
+\indent Symmetric: TRUE\\
+\indent Anti-Symmetric: False (1,2) exists and so does (2,1) \\
+\indent Transitive: False (3,4) exists, (4,3) exists but (3,3) does not exist. \\
+\\
+\indent e) Reflexive: TRUE
+\indent Ir-reflexive: False (1,1) exists in R\\
+\indent Symmetric: TRUE \\
+\indent Anti-Symmetric: False (1,2) exists in R and (2,1) exists in R\\
+\indent Transitive: TRUE\\
+\\
+14.4\\
+\indent a) Reflexive, symmetric, Transitive \\
+\indent b) Ir reflexive, Anti-symmetric \\
+\indent c) Reflexive, symmetric,Transitive \\
+\indent d) Reflexive, symmetric \\
+\indent e) Irreflexive, symmetric \\
+\indent f) Irreflexive, Anti-symmetric \\
+
 \vspace{.15in}
 
 \noindent \textbf{Remark:} When doing problem 14.3:  If a particular property fails, justify why with an appropriate counterexample.  For instance, when looking at 14.3(a), we notice that \textit{Irreflexive}=F.  A counterexample would be say $x = 1$ since $1 \centernot{R} 1$ = F.  
