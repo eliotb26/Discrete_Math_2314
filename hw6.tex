@@ -1,0 +1,224 @@
+
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath, amssymb, amsthm, graphicx, hyperref}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\usepackage{multirow, multicol}
+\usepackage{tikz}
+\pagestyle{fancy}
+\fancyhead[RO]{Eliot Brown Spring 2020}
+\fancyhead[LO]{MA-UY 2314: Discrete Mathematics}
+\usepackage{comment}
+\newif\ifshow
+\showfalse
+\usepackage{centernot}
+\usepackage{cancel}
+
+
+\begin{document}
+
+\begin{center}
+  \textbf{\Large Homework 6} \\
+Due: Friday March 27 by 11:59pm
+via Gradescope
+\end{center}
+
+\hrule
+
+\vspace{0.25in}
+
+
+
+\begin{enumerate}
+    \item (6 points) 16.1, 16.3.  You should briefly explain your answer for 16.3.  
+    
+ \textbf{Solution 16.1} \\
+  $ P = \{\{1\},\{2\},\{3\}\} \\ 
+    P = \{\{1,2\},\{3\}\} \\ 
+    P = \{\{1,3\},\{2\}\} \\
+    P = \{\{2,3\},\{1\}\} \\ 
+    P = \{\{1,2,3\}\} \\
+  $
+ 
+
+
+ \textbf{16.3}
+ All partitions of $A$ = \{1,2,3,4\}: \\ 
+ $P = \\ 
+     \{\{1\},\{2\},\{3\},\{4\}\} \\ \{\{1,2\},\{3\},\{4\}\} \\ 
+    \{\{1\},\{2,3\},\{4\}\} \\ 
+    \{\{1,3\},\{2\},\{4\}\} \\ 
+    \{\{1,2,3,4\}\} \\ 
+    \{\{1\},\{2\},\{3,4\}\} \\ 
+    \{\{1,4\},\{2\},\{3\}\} \\ 
+    \{\{2,4\},\{1\},\{3\}\} \\ 
+    \{\{1,4\},\{2,3\}\} \\
+    \{\{1,3\},\{2,4\}\} \\
+    \{\{1,2\},\{3,4\}\} \\ 
+    \{\{1,2,3\},\{4\}\} \\
+    \{\{2,3,4\},\{1\}\} \\
+    \{\{1,2,4\},\{3\}\} \\ 
+    \{\{1,3,4\},\{2\}\}
+ $
+\vspace{.15in}
+
+\item (15 points)  Section 16:  16.8, 16.9, 16.12.  You should briefly explain your answer.  
+
+\textbf{Solution 16.8}
+ \# of ways $ = \frac{2(6!)}{12}$ \\ 
+ This is because the total ways to arrange the two groups (men and women) is 2(6!) then because of over count where the circular arrangement can be rotated and remain the same so it is divided by 12 (amount of people around the circle). \\ 
+ 
+\textbf{16.9}
+ \# of ways $= \frac{20!}{2(20)}$ \\
+ As there are 20 beads in a circular fashion, there is 20! ways to organize 20 beads, but as it is in a circular arrangement, it can be rotated and remain the same so this is divided by 20 (20 beads in circle). Then as the beads can be mirrored or inversed and still remain the same, it is also divided by 2. \\
+
+\textbf{16.12} \# of ways = $= \frac{40!}{(20!)(2^{20})}$ \\ 
+This is because the total number of ways to organize 40 tennis players is 40!. When you arrange 20 people in 2 groups each, the number of arrangements for that is 20! which is the over count of the order of the groups. The groups of people can also be arranged in 2! ways and if there are 20 groups being arranged in 2! ways, then it is set up as $2^{20}$. \\ 
+
+\item (21 points) Section 16:  16.14-16.17.  You should explain briefly your answer.  
+
+\textbf{Solution 16.14} \# of ways $=  \frac{(10!)^4}{(10!)}$ \\ 
+This is because the total ways to arrange 4 groups of 10 is $(10!)^4$ with the over count of the ways that these groups could be organized within the total groups which is 10!. \\
+
+
+\textbf{Solution 16.15} \# of partitions $= 7$ \\ 
+This is because $|A| = 2^4 = 16$. There is then 2 part partitions wanted, so $m = 2$. Then the amount of partitions is $\frac{|A|}{m} = 8$ but as the null set would not be valid it is $8-1 = 7$. \\ 
+
+For \{1,2,..., 100\} the number of 2 part partitions would be $\frac{2^{100} - 2}{2}$ as $|A| = 2^{100} - 2$ as there are two instances which would not give a 2 part partition and $m = 2$ \\
+
+\textbf{Solution 16.16} \# of partitions $= 3^{97}$ \\
+This is because 1,2,3 are already set to be in different partitions, with exactly 3 partitions, so to fill three partitions, each then has a choice from the remaining 97 values. \\
+
+\textbf{Solution 16.17} 16.17. 100 elements can be arranged in 100! ways. Splitting into 20 parts of size 5, means there is 20! ways to arrange the parts and 5! ways to arrange each group and so for all groups it would be $(5!)^{20}$ so it would give an answer of $100!/((5!)^{20}20!)$. This is approximately equal to $1 \times 10^{98}$. Whereas if we were to split it into 5 parts of size 20!, it would be mean there is 5! ways to arrange the groups and 20! ways to arrange each group and so for all groups it would be $(20!)^{5}$ so it would give an answer of $100!/((20!)^{5}5!)$. This is approximately equal to $9 \times 10^{63}$. Hence, it can be seen that the first part gives a much larger answer\\
+
+
+
+\item (3 points)  How many solutions to the equation 
+\[
+x_{1} + x_{2} + x_{3} = 10
+\]
+are there if the $x_{1}, x_{2}, x_{3}$ are natural numbers.  For instance $x_{1} = 10, x_{2} = 0, x_{3} = 0$ is such a solution.  So is, $x_{1} = 0, x_{2} = 10, x_{3} = 0$.  Similarly, $x_{1} = x_{2} = 1, x_{3} = 8$ is a solution, etc.  Explain your answer.  
+
+\textbf{Solution}\\ $\frac{12!}{2!*10!}$ 
+
+
+\item  Let's generalize the problem above.  How many solutions are there to the equation 
+\[
+x_{1} + x_{2} + \cdots + x_{n} = a
+\]
+where $a$ is an integer larger than $n$ and $x_{j} \in \mathbb{N}$ for all $j = 1, 2, \ldots n$.  Explain your answer. 
+
+\textbf{Solution} $\frac{(a+n-1)!}{(n-1)!a!}$.  Same as last, just with variables. 
+
+
+\item (30 points)  17.3-17.7.  You should explain your answer. 
+
+\textbf{17.3} \\
+All of these explanations include the equation 
+\begin{align*}
+  (x+y)^{n} &= \sum_{k=0}^{n} {n \choose k} x^{n-k} y^{k}\\
+\end{align*}
+ a) 20. as $n=6 \;\; k = 3 \;\; x=1 \;\; y=1$ then $n \choose k$ \\
+ b) n=6, so k=6-3=3. Using the formula, we have ${6 \choose 3}(2x)^{3}(-3)^{3}$, so the coefficient is ${6 \choose 3}(2x)^{3}(-3)^{3}$= -4320.\\
+ c) 0. n=20, so k=20-3=17. Using the formula for the first addend, we have ${20 \choose 17}(x)^{3}*1^{3}$, so the coefficient is ${20 \choose 17}*1$. Using the formula for the second addend, we have ${20 \choose 17}(x)^{3}*1(-1)^{3}$, so the coefficient is -1*${20 \choose 17}.$ Summing these, ${20 \choose 17}$ - ${20 \choose 17}$=0.\\ 
+ d)  n=6, k=3. Using the formula, we have ${6 \choose 3}x^{3}y^{3}$, so the coefficient is ${6 \choose 3}$= 20.  \\
+ e) The exponents of x and y must add to 7, but here they don't satisfy that, so the coefficient is 0 as it does not appear in the expansion. \\ 
+ 
+
+\textbf{17.4} \\
+ i) 30 choose 2 as 30 socks and want group of 2. $30 \choose 2$ \\ 
+ ii) then two ways to put those socks on feet so ${30 \choose 2} \times 2$   \\ 
+ 
+\textbf{17.5} \\ 
+ 20 choose 2 $20 \choose 2$ as 20 people where every 2nd element is a handshake, or where 2 people create a handshake. 
+
+\textbf{17.6} \\ 
+ a) $n \choose k$ as n digit and want to choose groups of those sequences when there are k 1s. \\ 
+ b) $n \choose k$ 
+
+
+\textbf{17.7} \\ 
+
+    $A =$ $12 \choose 4 $
+    $B = $ $8 \choose 4$
+    $C = $ $4 \choose 4$
+    as start with 12 but create list of 4 so then have 4 less to choose from. 
+    so product of these:  
+    
+    $ 12 \choose 4$ $8 \choose 4$ $4 \choose 4$ \\ 
+    
+
+\item (12 points)  17.10, 17.11, 17.18.  You should explain your answer.  Note that you will be asked to explain your answer on all exams.
+
+\textbf{17.10} \\
+a) We need to perform 3 actions, and either push 1 or 2 buttons on each action (order of the buttons does not matter). We can select 1 of the 5 buttons in ${5 \choose 1}$ ways, and 2 of the 5 in ${5 \choose 2}$ ways. Number of ways of a single action is the sum of number of ways for each option: ${5 \choose 1}$ + ${5 \choose 2}$= 15. Hence, there are 15 options for each of all three actions; number of ways for all 3 actions is then $15^{3}$= 3375. \\ 
+
+b) $5 \choose 2$$3*2$ + $4 \choose 2$$5*2$ + $3 \choose 2$$5*4$ + $5 \choose 2$$3 \choose 2$$*1$ + $5 \choose 2$$*3*$$2 \choose 2$ + $5$ $4 \choose 2$ $2 \choose 2$. As need to make sure that the digit is not repeated, so ways to pick remaining number multiplied by pressing two buttons that were not pressed yet and taking the sum of these combinations.
+
+\textbf{ 17.11} \\
+ choose 4 elements from n and put into one group, then the other group gets the rest. Therefore you can switch the two groups which leads to an answer of $n \choose 4$$*2$  \\
+
+\textbf{17.18} \\
+there are n+1 vertical lines and m+1 horizontal lines, so need to choose a combination of 2 lines from each $n+1 \choose 2$$m+1 \choose 2$ \\
+
+
+\item (3 points)  Give a combinatorial proof of 17.15 (the second line)  
+
+\textbf{Solution} \\
+
+
+\item (3 points) Section 17.  Give a combinatorial proof of 17.16 
+
+\textbf{Solution} \\ 
+Q: How many ways to form a team of size k then choose a captain of that team? \\ 
+ANS: $n \choose k$ $k$ as ways to form a team then need to choose a captain from that formed team. \\
+ANS: could select captain from the whole group of people (n) then select the team around that captain: $n$ $n-1 \choose k-1$
+
+
+\item (3 points) Section 17.  Give a combinatorial proof of 17.17 
+
+\textbf{Solution}\\ 
+Q: Form a group size k then choose captains from that group of size m. \\ 
+ANS: $n \choose k$ $k \choose m$ as it is choosing the group then making a captains from that group. \\ 
+ANS: Choose captains (m) from total n then fill rest of group  $n \choose m$ $n-m \choose k-m$
+
+
+\item (3 points) Section 17.  Give a combinatorial proof of 17.23 
+
+\textbf{Solution} \\ 
+Q: Form a group of 3 from n people.  \\
+ANS: $n \choose 3$ definition \\
+ANS: $2 \choose 2$ is the num of 3 element subsets where 3 is the largest number in it \\
+$3 \choose 2$ is the num of 3 element subsets where 4 is the largest number. \\ 
+$n-1 \choose 2$ is the num of 3 element subsets where n is the max number which is why the summation ends at n-1
+
+\end{enumerate}
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
