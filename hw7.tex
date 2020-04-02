@@ -1,0 +1,74 @@
+
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath, amssymb, amsthm, graphicx, hyperref}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\usepackage{multirow, multicol}
+\usepackage{tikz}
+\pagestyle{fancy}
+\fancyhead[RO]{Eliot Brown Spring 2020}
+\fancyhead[LO]{MA-UY 2314: Discrete Mathematics}
+\usepackage{comment}
+\newif\ifshow
+\showfalse
+\usepackage{centernot}
+\usepackage{cancel}
+
+
+\begin{document}
+
+\begin{center}
+  \textbf{\Large Homework 7} \\
+Due: Friday April 3 by 11:59pm
+via Gradescope
+\end{center}
+
+\hrule
+
+\vspace{0.25in}
+
+Prove all of the given statements by contradiction.    
+\begin{enumerate}
+    \item (3 points)If $x$ is a real number such that $|x| < \varepsilon$ for any $\varepsilon > 0 $ then $x$ must be zero. \\ 
+    \\
+    If x is a real number $|x|<\epsilon$ $\forall \epsilon >0$ and $x = 0 $ \\ 
+    PF by contradiction: Assume $|x|<\epsilon$ $\forall \epsilon >0$ and $x \neq 0 $ \\
+    Need to show that obtain a F statement \\ 
+    $x \neq 0$  $|x| < \epsilon$ \;\; $\epsilon > 0$ $\forall \epsilon$ \;\; $a,b \epsilon \mathbb{Z} \;\; $a \neq b$ \\ 
+    $$|a| < \epsilon \wedge |b| < \epsilon $ then can limit to $a \geq 0 \wedge b \geq 0$ \\ 
+    $a < \epsilon \wedge b < \epsilon $ \\ 
+    $\epsilon = \{1,2,3,... \infty\}$ \\ 
+    $0 < a \wedge 0 = b$ \;\;\; $a=b \rightarrow \leftarrow $ \square \\
+    
+    
+    \item (3 points) Prove there is no positive integer $a$ such that $a^{2} + a^{3} = 100$ .\\ 
+    \\ 
+    If $a>0$ where $a \epsilon \mathbb{Z}$ and $a^2 + a^3 = 100$ \\ 
+    Need to show that can obtain a False statement.  \\ 
+    $a^2 + a^3 = 100$ \\ 
+    $a^3 + a^2 - 100 = 0$  \;\; then factored \\ 
+    $a = 4.33$ \;\; which is not an integer \\ 
+    $\rightarrow \leftarrow  \;\; \square $
+    
+    \item (3 points) Prove that $\sqrt{2}$ is an irrational number.  
+    
+    \textbf{Remark:} An irrational number is a real number that is not a rational number.  \\
+    \\ 
+    If $a=\sqrt{2}$ then a is irrational.  \\ 
+    PF by contradiction: Assume $a=\sqrt{2}$ and a is rational \\
+    $a = \sqrt{2}$ \;\;\; $\sqrt{2} = \frac{a}{b}$ where $b \neq 0$  and $\frac{a}{b}$ is irreducible (no factors) \\ 
+    $2 = \frac{a^2}{b^2}$ \\ 
+    $2b^2= a^2$ \;\; shows that $a^2$ is even therefore a is even $a = 2k$ \;\; $k \epsilon \mathbb{Z}$\\
+    $2b^2 = (2k)^2$ \\
+    $b^2 = 2k^2$ \;\; shows that $b^2$ is even therefore b is even \\ 
+    As both a and b are even they then have a common factor of 2, which shows that $\frac{a}{b}$ is not irreducible if $\sqrt{2} = \frac{a}{b}$ \\ 
+    $ \rightarrow \leftarrow \;\; \square$ \\ 
+    
+\end{enumerate}
+
+
+
+\end{document}
+
+
