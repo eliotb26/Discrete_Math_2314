@@ -1,0 +1,209 @@
+
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath, amssymb, amsthm, graphicx, hyperref}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\usepackage{multirow, multicol}
+\usepackage{tikz}
+\pagestyle{fancy}
+\fancyhead[RO]{ELIOT BROWN Spring 2020}
+\fancyhead[LO]{MA-UY 2314: Discrete Mathematics}
+\usepackage{comment}
+\newif\ifshow
+\showfalse
+\usepackage{centernot}
+\usepackage{cancel}
+
+
+\begin{document}
+
+\begin{center}
+  \textbf{\Large Homework 8} \\
+Due: Friday April 10 by 11:59pm 
+by Gradescope
+\end{center}
+
+
+\hrule
+
+\vspace{0.25in}
+
+\begin{enumerate}
+    \item (3 points) Section 20:  20.12
+    Assume $x = N$, where $N= d_k10^{k} +d_{k-1}10^{k-1}+...+d_1 10 + d_0 $\\
+    \textbf{Proof by contradiction: }\\
+    1. $10|x \rightarrow d_0 \neq 0$\\
+    2. $d_0 = 0 \rightarrow 10|x = \textbf{F}$\\
+    
+    1. \\
+    $x=10k$, where $k \in \mathbb{Z}$\\
+    $10k = d_k10^{k} +d_{k-1}10^{k-1}+...+d_1 10 + d_0 $\\
+    $k = d_k10^{k-1} +d_{k-2}10^{k-2}+...+d_1 + \frac{d_0}{10} $
+    since $d_0 \neq 0$, this implies $d_0 \in \{1,2,3,...,9\}$ \\
+    but then, $\frac{d_0}{10}$ is not an integer and so k is not an integer and this is a contradiction.
+    
+    2. \\
+    $d_0 = 0$ so $N= d_k10^{k} +d_{k-1}10^{k-1}+...+d_1 10 $ \\
+    The statement $10k = d_k10^{k} +d_{k-1}10^{k-1}+...+d_1 10 $ , where $k \in \mathbb{Z}$ is false. \\
+    This implies $k = d_k10^{k-1} +d_{k-2}10^{k-2}+...+d_1 $ is false. \\
+    However, this is false as $d_1$ through $d_k$ are all integers multiplied by powers of 10, hence the sum of integers is an integer and so this is a contradiction.
+    
+    
+    \item (12 points) Do exam2$\_$beta on Gradescope.  
+   
+    \item (3 points)  Section 21:  21.5. 
+    
+    let $X = \{ n \geq 0 : \binom{2n}{n} > 4^n\}$\\
+    NTS $X=\emptyset$\\
+    \textbf{Proof by WOPT: } Assume $X \neq \emptyset$\\
+    Base Case: $n=0$\\
+    $\binom{2n}{n} = \binom{0}{0}= \text{ LHS }=0$\\
+    $4^n=4^0= \text{RHS}=1$, $0 \leq 1$\\
+    This implies P(0) = T \\
+    SES:\\
+    let k be the smallest element in X s.t.\\
+    (i) $k \in X \rightarrow \binom{2k}{k} > 4^k$\\
+    (ii) $k \leq x, \;\; \forall x \in X$\\
+    $(k-1) \notin X$ according to (ii) and $P(k-1) = T$ according to Base Case.\\
+    $\binom{2(k-1)}{k-1} \leq 4^{k-1}$\\
+    
+    $= \frac{(2k-2)!}{k-1!k-1!} \leq 4^{k-1} $\\
+    
+    NTS $\frac{(2k)!}{k!k!} \leq 4^{k}$\\
+    
+    multiply both sides by $\frac{(2k-1)(2k)}{(k)(k)}$\\
+    
+    $= \frac{(2k-2)!}{k-1!k-1!}\times \frac{(2k-1)(2k)}{(k)(k)}  \leq 4^{k-1} \times \frac{(2k-1)(2k)}{(k)(k)} $\\
+    
+    $=\frac{(2k)!}{k!k!} \leq 4^{k-1} \times \frac{(2k-1)(2)}{k} $\\
+    
+    NTS $ 4^{k-1} \times \frac{(2k-1)(2)}{k} \leq 4^k$\\
+    
+    $= 4^{k-1} \times \frac{(2k-1)(2)}{k} \leq 4^{k-1} \times 4$\\
+    
+    $= \frac{(2k-1)(2)}{k} \leq 4$\\
+    
+     $4k-2 \leq 4k \;\;\;  \square$
+    
+    \item (3 points) Section 21: 21.6\\
+    let $X = \{ n \geq 1 :\;\;\;1\times1! + 2\times2! + ... + n\times n! \neq (n+1)!-1\}$\\
+    \textbf{NTS} $X=\emptyset$\\
+    \textbf{Proof by WOPT: } Assume $X \neq \emptyset$\\
+    Base Case: $n=1$\\
+    $1\times 1! = \mbox{LHS} = 1$\\
+    $(1+1)!-1 = 2! -1 = \mbox{RHS}=1$\\
+    So P(1) = T \\
+    SES:\\
+    let k be the smallest element in X s.t.\\
+    (i) $k \in X \rightarrow \;\;\; 1\times1! + 2\times2! + ... + n\times n! \neq (n+1)!-1$\\
+    (ii) $k \leq x, \;\; \forall x \in X$\\
+    $(k-1) \notin X$ according to (ii) and $P(k-1) = T$ according to Base Case.\\
+    
+    $1\times1! + 2\times2! + ... + (k-1)\times (k-1)! = ((k-1)+1)!-1$\\
+    
+    \textbf{NTS} $1\times1! + 2\times2! + ... + k\times k! = (k+1)!-1$\\
+    
+    add $k\times k!$ to both sides\\
+    
+    $1\times1! + 2\times2! + ... + (k-1)\times (k-1)! + k\times k! = k!-1 + k\times k!$\\
+    
+    \textbf{NTS} $k!-1 + k\times k! = (k+1)!-1$\\
+    
+    $ k\times k! + k! -1 = k!(k+1)-1  $\\
+    
+    Since $k!(k+1)=(k+1)!$, $k!(k+1)-1 = (k+1)!-1 \;\; \square$ 
+    
+    
+    \item (3 points) Section 21:  21.7.  
+    $F_n > 1.6^n , \;\; n\geq29$\\
+    let $X = \{ n \geq 29 : F_n \leq 1.6^n$\}\\
+    \textbf{NTS} $X=\emptyset$\\
+    \textbf{Proof by WOPT: } Assume $X \neq \emptyset$\\
+    Base Case: $n=29$\\
+    $F_29 = \mbox{LHS}= 832040$\\
+    $1.6^{29} = \mbox{RHS} = 830767 $
+    so P(29) = T \\
+    Base Case: $n=30$\\
+    $F_29 > 1.6^{29}$ \\
+     
+    so P(30) = T \\
+    SES:\\
+    let k be the smallest element in X s.t.\\
+    (i) $k \in X \rightarrow F_n \leq 1.6^n$ \\
+    (ii) $k \leq x, \;\; \forall x \in X$\\
+    $(k-1) \notin X$ according to (ii) and $P(k-1) = T$ according to Base Case.\\
+    
+    $F_{k-1} > 1.6^{k-1}$ \;\;\; (iii)\\
+    
+    then also $k-2$ \\
+    $F_{k-2} > 1.6^{k-2}$ \;\;\; (iv) \\ 
+    then want to match a side with (i) to substitute so Add (iii) +(iv) 
+    $F_{k-1} + F_{k-2} > 1.6^{k-1} + 1.6^{k-2}$ \\ 
+    $F_k >  1.6^{k-1} + 1.6^{k-2}$ \;\;\; (v) \\ 
+    then Allign with (i) \\ 
+    $1.6^{k-1} + 1.6^{k-2} < 1.6^{k}$ \;\;\; then flip to contradict statement \\ 
+    NTS: $1.6^{k-1} + 1.6^{k-2} \geq 1.6^{k}$ \\
+    divide by $(1.6)^{k-2}$ \\ 
+    $1.6 + 1 \geq 1.6^2$ \\ 
+    $2.6 \geq 2.56$  \rightarrow \leftarrow \\ 
+    $\square$
+    
+    
+%     \textbf{NTS} $F_k > 1.6^k$\\
+    
+%     multiply $1.6$ on both sides\\
+    
+%   $F_{k-1} \times 1.6 > 1.6^{k-1} \times 1.6$\\
+  
+%      $F_{k-1} \times 1.6 > 1.6^{k}$\\
+     
+%      \textbf{NTS} $F_k \geq F_{k-1} \times 1.6$ \\
+     
+%      $F_k - F_{k-1} \times 1.6 \geq 0$
+     
+%      BC $\rightarrow 29 \notin X \rightarrow k \geq 30 \rightarrow F_{30} - F_{29} \times 1.6 > 15005 \rightarrow 15005 \geq 0 \;\; \square$\\
+     
+    \item (3 points) Section 21:  21.8.\\
+    
+    $F_0 + F_1 + ... + F_n = F_{n+2} -1 $\\
+    let $X = \{ n \geq 0 : F_0 + F_1 + ... + F_n = F_{n+2} -1\}$\\
+    \textbf{NTS} $X=\emptyset$\\
+    \textbf{Proof by WOPT: } Assume $X \neq \emptyset$\\
+    Base Case: $n=0$\\
+    $F_0 = \mbox{LHS} = 1$\\
+    $F_2 -1 = \mbox{RHS}= 2 - 1=1$\\
+    so P(0) = T \\
+    SES:\\
+    let k be the smallest element in X s.t.\\
+    (i) $k \in X \rightarrow F_0 + F_1 + ... + F_n = F_{n+2} -1$ \\
+    (ii) $k \leq x, \;\; \forall x \in X$\\
+    $(k-1) \notin X$ according to (ii) and $P(k-1) = T$ according to Base Case.\\
+    
+    $F_0 + F_1 + ... + F_{k-1} = F_{(k-1)+2} -1$\\
+    
+    $F_0 + F_1 + ... + F_{k-1} = F_{k+1} -1$\\
+    
+    \textbf{NTS} $F_0 + F_1 + ... + F_k = F_{k+2} -1 $\\
+    
+    add $F_{k}$ to both sides.\\
+    
+    $F_0 + F_1 + ... + F_{k-1} + F_{k}  = F_{k+1} + F_{k} -1$\\
+    
+    
+    
+    $  F_{k-2} + F_{k-1} = F_{k} \rightarrow F_{k} + F_{k+1} = F_{k+2}$\\
+    
+    $F_0 + F_1 + ... + F_{k-1} + F_{k}  = F_{k+2} -1 \;\; \square$\\
+    
+\end{enumerate}
+
+
+
+
+
+\noindent \textbf{Remark:}  When proving problems from section 21, you must use the Well-Ordering Principle technique.  See page 131 for details.
+
+
+
+\end{document}
